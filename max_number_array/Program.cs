@@ -34,8 +34,10 @@ int MaxNumberArray(int[] arr, int sizeArr)
     }
     else
     {
-        if (arr[sizeArr] < MaxNumberArray(arr, sizeArr)) return arr[sizeArr] = arr[sizeArr - 1];
-        else return arr[sizeArr];
+        int max = MaxNumberArray(arr, sizeArr);
+
+        if (arr[sizeArr] < max) return max;
+        else return max = arr[sizeArr];
     }
 }
 
@@ -46,3 +48,6 @@ Console.WriteLine();
 
 int result = MaxNumberArray(array, array.Length);
 Console.WriteLine($"Максимальный элемент в массиве = {result}");
+
+PrintArray(array);
+Console.WriteLine();
