@@ -27,7 +27,7 @@ void PrintArray(int[] arr)
 int SumArray(int[] arr, int sizeArr)
 {
     sizeArr -= 1;
-    if (sizeArr < 0) return 0;
+    if (sizeArr == 0) return arr[sizeArr];
     else return arr[sizeArr] + SumArray(arr, sizeArr);
 }
 
@@ -37,4 +37,4 @@ PrintArray(array);
 Console.WriteLine();
 
 int result = SumArray(array, array.Length);
-Console.WriteLine($"Сумма элементов массива = {result}");
+Console.WriteLine(result);
